@@ -1,0 +1,49 @@
+@import "tailwindcss";
+
+@theme {
+  --font-primary: "Archivo", "sans-serif";
+  --font-secondary: "Playfair Display", "sans-serif";
+  --font-tertiary: "Dela Gothic One", "sans-serif";
+
+  --color-primary: #F83B22;
+  --color-secondary: #FF742F;
+  --color-tertiary: #401214;
+
+  --color-black: #141414;
+  --color-muted: #a9a9a9;
+  --color-foreground: #F5F5F5;
+  --color-danger: #ff0000;
+}
+
+@layer base {
+  body {
+    @apply bg-black text-white font-primary selection:text-white selection:bg-tertiary;
+  }
+
+  * {
+    scrollbar-width: thin;
+    scrollbar-color: #eeeeee transparent;
+  }
+
+  *::-webkit-scrollbar {
+    width: 4px;
+  }
+
+  *::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  *::-webkit-scrollbar-thumb {
+    background-color: #f5f5f5;
+    border-radius: 999px;
+  }
+
+  .scrollbar-none {
+    scrollbar-width: none;
+  }
+
+  .scrollbar-none::-webkit-scrollbar {
+    display: none; 
+  }
+
+}
