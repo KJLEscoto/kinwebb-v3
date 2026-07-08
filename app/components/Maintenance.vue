@@ -1,3 +1,12 @@
+<script setup lang="ts">
+useSeoMeta({
+  title: 'Under Maintenance',
+  ogTitle: 'Under Maintenance',
+  description: 'This site is currently under maintenance.',
+  ogDescription: 'This site is currently under maintenance.',
+})
+</script>
+
 <template>
   <div class="relative flex items-end justify-start min-h-screen px-6 py-10 sm:px-10 md:px-16 lg:px-20 overflow-hidden">
     <img src="/images/hero_image.jpg" alt="Hero Image"
@@ -24,7 +33,7 @@
       </p>
       <section class="flex flex-col sm:flex-row items-stretch sm:items-center gap-3">
         <a href="mailto:kin.webb.1024@gmail.com"
-          class="rounded-full bg-white px-6 sm:px-8 py-3 flex items-center justify-center gap-2 hover:opacity-80 active:scale-95 duration-300">
+          class="rounded-full bg-white px-6 sm:px-8 py-3 flex items-center justify-center gap-2 hover:opacity-80 active:scale-95 duration-200">
           <svg xmlns="http://www.w3.org/2000/svg" class="size-5 sm:size-6 text-primary shrink-0" viewBox="0 0 24 24">
             <path d="M0 0h24v24H0z" fill="none" />
             <path fill="currentColor"
