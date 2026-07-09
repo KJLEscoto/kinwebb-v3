@@ -8,14 +8,14 @@ useSeoMeta({
 </script>
 
 <template>
-  <div class="relative flex items-end justify-start min-h-screen px-6 py-10 sm:px-10 md:px-16 lg:px-20 overflow-hidden">
+  <div class="relative flex items-end justify-start min-h-screen px-6 py-8 md:px-16 lg:px-20 overflow-hidden">
     <img src="/images/hero_image.jpg" alt="Hero Image"
       class="w-full object-cover min-h-auto h-screen absolute inset-0 select-none" draggable="false" />
     <p
-      class="font-secondary italic text-2xl sm:text-3xl md:text-4xl absolute top-[20%] left-[8%] sm:top-[35%] sm:left-[20%] md:top-[40%] xl:left-[35%]">
+      class="font-secondary italic text-2xl sm:text-3xl md:text-4xl absolute top-[20%] left-[8%] sm:top-[35%] sm:left-[20%] md:top-[40%] xl:left-[35%] z-20">
       Hey!..
     </p>
-    <div class="relative z-10 space-y-4 sm:space-y-5 pb-6 sm:pb-0">
+    <div class="relative z-10 space-y-4 sm:space-y-5">
       <section class="flex items-end flex-wrap md:gap-4 sm:gap-2 gap-0">
         <h1
           class="text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-tertiary leading-none! bg-linear-to-r from-secondary to-primary bg-clip-text text-transparent">
