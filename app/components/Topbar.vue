@@ -5,8 +5,7 @@ const instagram = 'https://www.instagram.com/_itskjle/'
 const dribbble = 'https://dribbble.com/kinwebb'
 const github = 'https://github.com/KJLEscoto'
 
-
-const isMaintenance = ref(true)
+const { isMaintenance } = useCheckMaintenance()
 
 const isScrolled = ref(false)
 
@@ -26,7 +25,7 @@ onUnmounted(() => {
 <template>
   <div class="fixed top-0 left-0 right-0 z-50 px-6 py-6 sm:px-10 md:px-16 lg:px-20 transition-colors duration-300"
     :class="isScrolled ? 'bg-white/20 backdrop-blur-xs' : 'bg-transparent'">
-    <div class="flex items-center gap-4" :class="[isMaintenance === true ? 'justify-between' : 'justify-center']">
+    <div class="flex items-center gap-4" :class="[isMaintenance ? 'justify-between' : 'justify-center']">
       <a href="/" class="w-fit h-fit">
         <ClientOnly>
           <img src="/meta/red_icon.png" alt="KinWebb Logo"
@@ -34,7 +33,7 @@ onUnmounted(() => {
         </ClientOnly>
       </a>
 
-      <div v-if="isMaintenance === true" class="flex gap-4 items-center">
+      <div v-if="isMaintenance" class="flex gap-4 items-center">
 
         <a :href="dribbble" target="_blank">
           <svg xmlns="http://www.w3.org/2000/svg" class="size-7 hover:opacity-80 active:scale-95 duration-200"
