@@ -10,7 +10,7 @@ useSeoMeta({
 <template>
   <div class="relative flex items-end justify-start min-h-screen px-6 py-8 md:px-16 lg:px-20 overflow-hidden">
     <img src="/images/hero_image.jpg" alt="Hero Image"
-      class="w-full object-cover min-h-auto h-screen absolute inset-0 select-none" draggable="false" />
+      class="w-full object-cover min-h-full h-screen absolute inset-0 select-none" draggable="false" />
     <p
       class="font-secondary italic text-2xl sm:text-3xl md:text-4xl absolute top-[20%] left-[8%] sm:top-[35%] sm:left-[20%] md:top-[40%] xl:left-[35%] z-20">
       Hey!..
