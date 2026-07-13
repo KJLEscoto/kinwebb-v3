@@ -32,12 +32,6 @@ useSeoMeta({
         and updated project showcases.
       </p>
       <section class="flex flex-col sm:flex-row items-stretch sm:items-center gap-3">
-        <button data-cursor-wait>
-          wait
-        </button>
-        <button disabled>
-          not allowed
-        </button>
         <a href="mailto:kin.webb.1024@gmail.com"  
           class="rounded-full bg-white px-6 sm:px-8 py-3 flex items-center justify-center gap-2 hover:opacity-80 active:scale-95 duration-200">
           <svg xmlns="http://www.w3.org/2000/svg" class="size-5 sm:size-6 text-primary shrink-0" viewBox="0 0 24 24">
@@ -47,7 +41,7 @@ useSeoMeta({
           </svg>
           <p class="font-semibold text-primary text-sm sm:text-base">LET'S CHAT</p>
         </a>
-        <a data-cursor-help href="https://old-kinwebb.netlify.app/" target="_blank"
+        <a href="https://old-kinwebb.netlify.app/" target="_blank"
           class="px-6 sm:px-8 py-3 border border-white/20 hover:border-white/60 duration-300 rounded-full flex items-center justify-center gap-2">
           <p class="font-semibold text-white text-sm sm:text-base">MY OLD WEBSITE</p>
           <svg xmlns="http://www.w3.org/2000/svg" class="size-5 sm:size-6 text-white shrink-0" viewBox="0 0 24 24">
