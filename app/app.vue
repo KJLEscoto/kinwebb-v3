@@ -9,6 +9,7 @@ onUnmounted(() => stopPolling())
   <div>
     <NuxtRouteAnnouncer />
     <NuxtLayout>
+      <CustomCursor />
       <Maintenance v-if="isMaintenance" />
       <NuxtPage v-else />
     </NuxtLayout>

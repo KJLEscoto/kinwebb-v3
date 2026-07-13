@@ -5,19 +5,27 @@
   --font-secondary: "Playfair Display", "sans-serif";
   --font-tertiary: "Dela Gothic One", "sans-serif";
 
-  --color-primary: #F83B22;
-  --color-secondary: #FF742F;
+  --color-primary: #f83b22;
+  --color-secondary: #ff742f;
   --color-tertiary: #401214;
 
   --color-black: #141414;
   --color-muted: #a9a9a9;
-  --color-foreground: #F5F5F5;
+  --color-foreground: #f5f5f5;
   --color-danger: #ff0000;
 }
 
 @layer base {
+  @media (pointer: fine) {
+    html,
+    body,
+    * {
+      cursor: none !important;
+    }
+  }
+
   body {
-    @apply bg-black text-white font-primary selection:text-white selection:bg-tertiary;
+    @apply bg-black text-white font-primary selection:text-white selection:bg-tertiary cursor-none!;
   }
 
   * {
@@ -43,7 +51,6 @@
   }
 
   .scrollbar-none::-webkit-scrollbar {
-    display: none; 
+    display: none;
   }
-
 }
