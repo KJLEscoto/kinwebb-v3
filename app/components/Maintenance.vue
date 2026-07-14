@@ -27,7 +27,7 @@ useSeoMeta({
         </p>
       </section>
       <p class="w-full sm:w-3/4 text-base sm:text-lg md:text-xl">
-        It’s just that I am currently working on a fresh new version of this website... with better content, cleaner
+        I'm just currently working on a fresh new version of this website... with better content, cleaner
         visuals,
         and updated project showcases.
       </p>
