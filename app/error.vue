@@ -11,7 +11,13 @@ const goBack = () => clearError().then(() => router.back())
 
 <template>
   <CustomCursor />
-  <div class="min-h-screen h-full w-full flex flex-col items-center justify-center sm:gap-8 gap-4 p-8">
+  <video autoplay muted loop playsinline webkit-playsinline preload="auto" disablepictureinpicture
+    controlslist="nodownload noplaybackrate noremoteplayback" aria-hidden="true"
+    class="absolute inset-0 w-full h-full object-cover">
+    <source src="/videos/404.mp4" type="video/mp4" />
+  </video>
+  <div class="min-h-screen h-full w-full flex flex-col items-center justify-center sm:gap-8 gap-4 p-8 relative z-10">
+    <img src="/meta/white_icon.png" alt="Loading" class="size-8 sm:size-10 shrink-0 absolute top-6 object-cover" />
     <section class="space-y-2 sm:space-y-5">
       <h1
         class="text-4xl text-center sm:text-6xl md:text-7xl lg:text-8xl font-tertiary leading-none! bg-linear-to-r from-secondary to-primary bg-clip-text text-transparent">
@@ -21,7 +27,8 @@ const goBack = () => clearError().then(() => router.back())
         {{ error?.statusMessage ?? 'Something went wrong' }}
       </h1>
     </section>
-    <p class="w-full lg:w-1/3 text-center text-base sm:text-lg md:text-xl">Oops! The page you’re looking for doesn’t exist, may have
+    <p class="w-full lg:w-1/3 text-center text-base sm:text-lg md:text-xl">Oops! The page you’re looking for doesn’t
+      exist, may have
       been moved, or is temporarily unavailable.</p>
     <button @click="goBack"
       class="px-6 sm:px-8 py-3 border border-white/20 hover:border-white/60 duration-300 rounded-full flex items-center justify-center gap-2">
