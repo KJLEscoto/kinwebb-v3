@@ -1,76 +1,9 @@
 <script setup lang="ts">
-type CursorType = 'default' | 'pointer' | 'not-allowed' | 'text' | 'wait'
-
-const x = ref(0)
-const y = ref(0)
-const isVisible = ref(false)
-const isTouch = ref(false)
-const showHelp = ref(false)
-const cursorType = ref<CursorType>('default')
-
-function hasDirectText(el: HTMLElement): boolean {
-  return Array.from(el.childNodes).some(
-    (node) => node.nodeType === Node.TEXT_NODE && !!node.textContent?.trim()
-  )
-}
-
-function resolveCursorType(target: HTMLElement): CursorType {
-  if (target.closest('[data-cursor-wait]')) {
-    return 'wait'
-  }
-
-  const interactive = target.closest('button, a, [role="button"], summary') as HTMLElement | null
-
-  if (interactive) {
-    if (interactive.hasAttribute('disabled') || interactive.getAttribute('aria-disabled') === 'true') {
-      return 'not-allowed'
-    }
-    return 'pointer'
-  }
-
-  if (target.closest('input, textarea, [contenteditable="true"]')) {
-    return 'text'
-  }
-
-  if (hasDirectText(target)) {
-    return 'text'
-  }
-
-  return 'default'
-}
-
-function handleMouseMove(e: MouseEvent) {
-  x.value = e.clientX
-  y.value = e.clientY
-  isVisible.value = true
-
-  const target = e.target as HTMLElement
-  cursorType.value = resolveCursorType(target)
-  showHelp.value = !!target.closest('[data-cursor-help]')
-}
-
-function handleMouseLeave() {
-  isVisible.value = false
-}
-
-onMounted(() => {
-  isTouch.value = window.matchMedia('(pointer: coarse)').matches
-  if (isTouch.value) return
-
-  window.addEventListener('mousemove', handleMouseMove)
-  document.addEventListener('mouseleave', handleMouseLeave)
-})
-
-onUnmounted(() => {
-  window.removeEventListener('mousemove', handleMouseMove)
-  document.removeEventListener('mouseleave', handleMouseLeave)
-})
+const { x, y, isVisible, isTouch, showHelp, cursorType } = useCustomCursor()
 </script>
 
 <template>
   <div v-if="!isTouch" class="fixed top-0 left-0 z-9999 pointer-events-none md:block hidden">
-
-    <!-- icon cluster: tracks cursor instantly -->
     <div class="flex items-center gap-1 transition-opacity duration-150 z-20 relative"
       :class="isVisible ? 'opacity-100' : 'opacity-0'" :style="{ transform: `translate(${x}px, ${y}px)` }">
 

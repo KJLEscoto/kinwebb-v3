@@ -1,5 +1,5 @@
 export default defineEventHandler(() => {
   return {
-    isMaintenance: true,
+    isMaintenance: false,
   };
 });

@@ -13,12 +13,12 @@ const goBack = () => clearError().then(() => router.back())
   <CustomCursor />
   <div class="min-h-screen h-full w-full flex flex-col items-center justify-center p-8 relative z-10">
     <video autoplay muted loop playsinline webkit-playsinline preload="auto" disablepictureinpicture
-    controlslist="nodownload noplaybackrate noremoteplayback" aria-hidden="true"
-    class="absolute inset-0 w-full min-h-full h-screen object-cover">
-    <source src="/videos/404.mp4" type="video/mp4" />
-  </video>
-  <img src="/meta/white_icon.png" alt="Loading" class="size-8 sm:size-10 shrink-0 absolute z-20 top-6 object-cover" />
-  <div class="relative z-10 sm:gap-8 gap-4 flex flex-col items-center justify-center w-full">
+      controlslist="nodownload noplaybackrate noremoteplayback" aria-hidden="true"
+      class="absolute inset-0 w-full min-h-full h-screen object-cover">
+      <source src="/videos/404.mp4" type="video/mp4" />
+    </video>
+    <img src="/meta/white_icon.png" alt="Loading" class="size-8 sm:size-10 shrink-0 absolute z-20 top-6 object-cover" />
+    <div class="relative z-10 sm:gap-8 gap-4 flex flex-col items-center justify-center w-full">
       <section class="space-y-2 sm:space-y-5">
         <h1
           class="text-6xl text-center sm:text-6xl md:text-7xl lg:text-8xl font-tertiary leading-none! bg-linear-to-r from-secondary to-primary bg-clip-text text-transparent">

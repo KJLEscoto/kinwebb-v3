@@ -18,14 +18,22 @@
 @layer base {
   @media (pointer: fine) {
     html,
+    html *,
     body,
-    * {
+    body * {
       cursor: none !important;
     }
   }
 
+  /* JS-driven backup for cases matchMedia in the composable catches
+     that the media query alone might not (hybrid devices, etc.) */
+  .custom-cursor-active,
+  .custom-cursor-active * {
+    cursor: none !important;
+  }
+
   body {
-    @apply bg-black text-white font-primary selection:text-white selection:bg-tertiary cursor-none!;
+    @apply bg-black text-white font-primary selection:text-white selection:bg-tertiary;
   }
 
   * {
