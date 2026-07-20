@@ -1,6 +1,8 @@
 <!-- layouts/maintenance.vue -->
 <template>
-  <div>
+  <div class="flex min-h-screen bg-black text-foreground">
+    <CustomCursor />
+    <AdminSidebar />
     <slot />
   </div>
 </template>
